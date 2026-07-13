@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Service | Shutrust Bakery Jajpur</title>
+  <style>
+    /* Base Setup & Pastel Colors */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fffaf7;
+      color: #4a3331;
+      line-height: 1.8;
+    }
+
+    /* Global Headings Style - All perfectly centered */
+    h1, h2, h3, h4 {
+      text-align: center;
+      color: #5c2c26;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #665250;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+
+    /* Navigation Bar */
+    header {
+      background-color: #ffffff;
+      padding: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    /* Red Button for returning Home */
+    .back-btn {
+      background-color: #ff0000;
+      color: #ffffff;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 6px rgba(255, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .back-btn:hover {
+      background-color: #cc0000;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Banner Section */
+    .subpage-hero {
+      background: linear-gradient(rgba(255, 240, 240, 0.9), rgba(255, 245, 245, 0.95)),
+                  url('https://unsplash.com') no-repeat center center/cover;
+      padding: 70px 20px;
+      border-bottom: 5px dashed #ffccd0;
+    }
+
+    .subpage-hero h1 {
+      font-size: 42px;
+      color: #d60000;
+    }
+
+    /* Direct Contact Row with Action Buttons */
+    .contact-container {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(92, 44, 38, 0.06);
+      padding: 40px;
+      max-width: 650px;
+      margin: -30px auto 40px auto;
+      text-align: center;
+      border-top: 6px solid #25d366; /* WhatsApp Green Anchor */
+      position: relative;
+      z-index: 10;
+    }
+
+    .phone-number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2c1a19;
+      margin: 15px 0;
+      letter-spacing: 1px;
+    }
+
+    /* Communication Buttons Grid */
+    .btn-grid {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .action-btn {
+      color: #ffffff;
+      padding: 12px 28px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128c7e;
+      transform: translateY(-2px);
+    }
+
+    .call-btn {
+      background-color: #007bff;
+    }
+
+    .call-btn:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    /* Main Transport & Logistics Grid */
+    .main-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .logistics-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .logistics-card {
+      background: #ffffff;
+      padding: 35px 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+      width: 340px;
+      text-align: center;
+      border-top: 5px solid #ff0000;
+      transition: transform 0.3s ease;
+    }
+
+    .logistics-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-emoji {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .logistics-card h3 {
+      font-size: 20px;
+      color: #5c2c26;
+    }
+
+    .logistics-card p {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    /* Ordering Guide List block */
+    .guide-box {
+      background-color: #fff0eb;
+      border-radius: 24px;
+      padding: 45px 30px;
+      margin-top: 60px;
+    }
+
+    .step-list {
+      max-width: 750px;
+      margin: 30px auto 0 auto;
+      list-style-type: none;
+    }
+
+    .step-item {
+      background: #ffffff;
+      padding: 15px 20px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.01);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .step-num {
+      background-color: #ff0000;
+      color: #ffffff;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .step-text {
+      font-weight: 500;
+      color: #4a3331;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #361d1b;
+      color: #f7eceb;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <h2>🍰 Shutrust Bakery Booking Desk</h2>
+    <a href="index.html" class="back-btn">⬅️ Back To Home Page</a>
+  </header>
+
+  <!-- Subpage Hero Banner Section -->
+  <section class="subpage-hero">
+    <h1>Order Your Dream Cake Instantly 🚀</h1>
+    <p style="font-size: 18px; font-weight: 500;">Ordering pure vegetarian sweet treats has never been simpler. Our digital lines are open round-the-clock for you! 🌟🧁</p>
+  </section>
+
+  <!-- Direct Quick Contact Floating Box -->
+  <div class="contact-container">
+    <div class="card-emoji" style="font-size: 45px; margin-bottom: 5px;">💬</div>
+    <h3>Our WhatsApp Line is Always Open!</h3>
+    <p style="font-size: 15px; color: #77605e; margin-bottom: 10px;">Send a design image or message directly to lock your sweet order.</p>
+    
+    <div class="phone-number">📲 +91 9668386495</div>
+    
+    <div class="btn-grid">
+      <!-- Active Links targeting your specific mobile number -->
+      <a href="https://wa.me" target="_blank" class="action-btn whatsapp-btn">💬 Chat on WhatsApp</a>
+      <a href="tel:+919668386495" class="action-btn call-btn">📞 Dial Direct Call</a>
+    </div>
+  </div>
+
+  <!-- Main Logistics and Vehicle Networks Section -->
+  <section class="main-content">
+    <h2>🚚 Flawless Delivery System All Across Odisha 🌐</h2>
+    <p>Distance is no problem for your celebrations! We have successfully engineered seamless transit procedures to make sure your fragile cream cakes reach safely anywhere.</p>
+
+    <div class="logistics-grid">
+      
+      <!-- Network Block 1: Local Deliveries Milestone -->
+      <div class="logistics-card">
+        <div class="card-emoji">🏡</div>
+        <h3>200+ Local Orders Delivered</h3>
+        <p>We have successfully sent over **200+ freshly baked orders** completely across our immediate neighborhood and surrounding blocks! Your neighbors in Tata Mines Kaliapani trust our punctuality implicitly. 🎉</p>
+      </div>
+
+      <!-- Network Block 2: Bus Network Transit -->
+      <div class="logistics-card" style="border-top-color: #2e7d32;">
+        <div class="card-emoji">🚌</div>
+        <h3>Odisha Bus Route Logistics</h3>
+        <p>Want a cake delivered to a distant town? We safely package your order in special sturdy insulation boxes and ship them securely across distant Odisha routes using trusted **local bus networks**! 🗺️</p>
+      </div>
+
+      <!-- Network Block 3: Local Vehicle Network -->
+      <div class="logistics-card">
+        <div class="card-emoji">🚗</div>
+        <h3>Local Vehicle Dispatches</h3>
+        <p>For large premium multi-tier cakes, we organize specialized **local private delivery vehicles**. This prevents shifts, bumps, or melting during transit throughout Jajpur roads! 🛠️</p>
+      </div>
+
+    </div>
+
+    <!-- Step by Step Ordering Guide Block -->
+    <div class="guide-box">
+      <h2>📝 Simple Steps to Book Your Cake 🎯</h2>
+      <p style="margin-bottom: 0;">Follow this easy path to secure your oven-fresh custom layout cake:</p>
+      
+      <ul class="step-list">
+        <li class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-text">Connect with us on WhatsApp or call us at <strong>+91 9668386495</strong>. 📞</div>
+        </li>
+        <li class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-text">Pick your favorite flavour (Chocolate, Vanilla, Butterscotch) and mention your preferred size. 🍓</div>
+        </li>
+        <li class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-text">Share your exact location inside Jajpur or your preferred bus route destination in Odisha. 📍</div>
+        </li>
+        <li class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-text">Sit back completely! Your cake is baked fresh and dispatched in safe, pristine condition. 🎂🚚</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Subpage Footer Area -->
+  <footer>
+    <p>Shutrust Bakery — Order Service Desk</p>
+    <p style="font-size: 13px; color: #c4b2b0;">📍 Tata Mines, Kaliapani, Jajpur, Odisha - 755017 | 🟢 100% Veg & Pure</p>
+  </footer>
+
+</body>
+</html>

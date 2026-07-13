@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shutrust Bakery | 100% Fresh Veg Cakes | Jajpur, Odisha</title>
+  <style>
+    /* Base Setup & Colors */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff9f5;
+      color: #4a3331;
+      line-height: 1.8;
+    }
+
+    /* Global Headings Style - All centered perfectly */
+    h1, h2, h3, h4, h5 {
+      text-align: center;
+      color: #5c2c26;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #665250;
+    }
+
+    /* Sticky Navigation Header */
+    header {
+      background-color: #ffffff;
+      padding: 20px 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .brand-logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #ff0000;
+      text-align: center;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    /* Red Buttons Navigation Layout */
+    .nav-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .red-btn {
+      background-color: #ff0000;
+      color: #ffffff;
+      padding: 12px 24px;
+      margin: 6px 12px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 6px rgba(255, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .red-btn:hover {
+      background-color: #cc0000;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(204, 0, 0, 0.3);
+    }
+
+    /* Hero Banner Area */
+    .hero-banner {
+      background: linear-gradient(rgba(255, 245, 240, 0.85), rgba(255, 245, 240, 0.9)), 
+                  url('https://unsplash.com') no-repeat center center/cover;
+      padding: 100px 20px;
+      text-align: center;
+      border-bottom: 5px dashed #ffccd0;
+    }
+
+    .hero-banner h1 {
+      font-size: 48px;
+      color: #d60000;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtext {
+      font-size: 22px;
+      margin-bottom: 35px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* Speciality Green Feature Badges */
+    .badge-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .veg-badge {
+      background-color: #e8f5e9;
+      color: #1b5e20;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 16px;
+      border: 2px solid #2e7d32;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    /* Layout Sections Wrapper */
+    .main-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #88706e;
+      margin-bottom: 50px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Content Cards Grid System */
+    .content-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .item-card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(92, 44, 38, 0.05);
+      padding: 35px 25px;
+      width: 350px;
+      text-align: center;
+      border: 1px solid #fff0eb;
+      border-top: 6px solid #ff0000;
+      transition: transform 0.3s ease;
+    }
+
+    .item-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card-emoji {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .item-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    /* Story & Quality Presentation Block */
+    .quality-highlight-box {
+      background-color: #ffebee;
+      border-radius: 24px;
+      padding: 50px 30px;
+      border-left: 8px solid #ff0000;
+      margin-top: 20px;
+    }
+
+    .quality-row {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .quality-point {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    }
+
+    /* Shop Location Grid Contact Card */
+    .address-card {
+      background-color: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      padding: 45px 30px;
+      max-width: 700px;
+      margin: 0 auto;
+      border-top: 6px solid #2e7d32; /* Green highlight for localization link */
+      text-align: center;
+    }
+
+    .address-details {
+      font-size: 18px;
+      margin: 20px 0;
+      color: #333;
+    }
+
+    .address-details span {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #361d1b;
+      color: #f7eceb;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 80px;
+    }
+
+    .footer-brand {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff4d4d;
+      margin-bottom: 15px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      max-width: 700px;
+      margin: 0 auto 15px auto;
+      color: #d1bebc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header Box -->
+  <header>
+    <div class="brand-logo">🎂 Shutrust Bakery</div>
+    
+    <!-- Red Menu Links -->
+    <div class="nav-container">
+      <a href="#variety-items" class="red-btn">✨ VARIETY ITEMS</a>
+      <a href="#quality-trust" class="red-btn">🤝 QUALITY AND TRUST</a>
+      <a href="#order-service" class="red-btn">📞 ORDER SERVICE</a>
+    </div>
+  </header>
+
+  <!-- Hero Welcome Banner -->
+  <section class="hero-banner">
+    <h1>Welcome to Shutrust Bakery 🎉</h1>
+    <p class="hero-subtext">Bringing sweet smiles and magical memories directly to your celebrations in Tata Mines Kaliapani! 🌸🍰 Let's make every slice sweet and memorable.</p>
+    
+    <!-- Pure Vegetarian & Fresh Identification System -->
+    <div class="badge-wrapper">
+      <span class="veg-badge">🟢 100% Pure Veg (Eggless)</span>
+      <span class="veg-badge">🍓 100% Freshly Baked</span>
+      <span class="veg-badge">😋 Super Delicious Taste</span>
+    </div>
+
+    <a href="#order-service" class="red-btn" style="font-size: 18px; padding: 16px 36px; border-radius: 50px;">🛍️ Order Fresh Cake Now</a>
+  </section>
+
+  <!-- Section 1: Variety Items Menu Display -->
+  <section id="variety-items" class="main-section">
+    <h2 class="section-title">🍰 Our Exquisite Variety Items 🍩</h2>
+    <p class="section-subtitle">We mix premium ingredients and pour extreme care into creating beautiful bakes. Explore what we specialize in daily!</p>
+    
+    <div class="content-grid">
+      <!-- Item Box 1 -->
+      <div class="item-card">
+        <div class="card-emoji">🎂</div>
+        <h3>Custom Birthday Cakes</h3>
+        <p>Beautiful multi-tier birthday cakes custom-tailored with premium frostings. Available in rich flavors like Black Forest, Pineapple, Butterscotch, and Royal Chocolate! 🍫</p>
+      </div>
+
+      <!-- Item Box 2 -->
+      <div class="item-card">
+        <div class="card-emoji">🧁</div>
+        <h3>Party Cupcakes</h3>
+        <p>Fluffy, cute, and delightfully sweet miniature cupcakes layered cleanly with velvety buttercream. The absolute ultimate addition to brighten your house parties! ✨</p>
+      </div>
+
+      <!-- Item Box 3 -->
+      <div class="item-card">
+        <div class="card-emoji">🍪</div>
+        <h3>Crispy Baked Cookies</h3>
+        <p>Buttery biscuits and crunchy cookies created inside our hot ovens every morning. Pair them perfectly alongside hot evening tea or afternoon coffee snacks! ☕</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Quality & Trust Content Block -->
+  <section id="quality-trust" style="background-color: #fff0eb;">
+    <div class="main-section">
+      <h2 class="section-title">🤝 Our Core Promise: Quality and Trust ❤️</h2>
+      <p class="section-subtitle">Your absolute health, joy, and peace of mind are our bakery's highest guiding priorities.</p>
+      
+      <div class="quality-highlight-box">
+        <div class="quality-row">
+          
+          <div class="quality-point">
+            <h4>🟢 Guaranteed 100% Vegetarian (Eggless) Kitchen</h4>
+            <p>We respect your lifestyle choices and food traditions completely. Our bakery operates a strict, zero-egg production kitchen area. Every sponge cake layout is guaranteed 100% vegetarian without compromising texture or moisture! 🌾</p>
+          </div>
+
+          <div class="quality-point">
+            <h4>🍓 Zero Compromise on Freshness</h4>
+            <p>We absolutely hate stale cakes! Shutrust Bakery does not store day-old processed sponges. Your cake structure is cleanly baked from raw flour only after you place your specific confirmation call with us. Live fresh, eat fresh! ⏰</p>
+          </div>
+
+          <div class="quality-point">
+            <h4>✨ Hygienic Premium Ingredients</h4>
+            <p>From rich premium imported cocoa chocolate powders to completely clean dairy-fresh milk whip creams and authentic seasonal fruits, we hand-pick everything locally to make your bites taste heavenly and premium! ⭐</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Order Services & Shop Geographic Location Mapping -->
+  <section id="order-service" class="main-section">
+    <h2 class="section-title">🏪 Easy Order Service & Contact Center 🚀</h2>
+    <p class="section-subtitle">Planning a beautiful wedding, anniversary, or surprise bash? Connect directly with us to get your order confirmed instantly.</p>
+    
+    <div class="address-card">
+      <div class="card-emoji">🏬</div>

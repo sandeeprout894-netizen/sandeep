@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Cake & Pastry Varieties | Shutrust Bakery</title>
+  <style>
+    /* Base Setup & Pastel Cream Colors */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fffaf7;
+      color: #4a3331;
+      line-height: 1.8;
+    }
+
+    /* Global Headings Style - Centered perfectly */
+    h1, h2, h3, h4 {
+      text-align: center;
+      color: #5c2c26;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #665250;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+
+    /* Navigation Header */
+    header {
+      background-color: #ffffff;
+      padding: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+
+    /* Red Button Style for returning Home */
+    .back-btn {
+      background-color: #ff0000;
+      color: #ffffff;
+      padding: 10px 20px;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 6px rgba(255, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .back-btn:hover {
+      background-color: #cc0000;
+      transform: translateY(-2px);
+    }
+
+    /* Page Main Hero Section */
+    .subpage-hero {
+      background: linear-gradient(rgba(255, 240, 240, 0.95), rgba(255, 245, 245, 0.97)),
+                  url('https://unsplash.com') no-repeat center center/cover;
+      padding: 60px 20px;
+      border-bottom: 5px dashed #ffccd0;
+      text-align: center;
+    }
+
+    .subpage-hero h1 {
+      font-size: 42px;
+      color: #d60000;
+      margin-bottom: 10px;
+    }
+
+    /* Subtitle banner customized from your input */
+    .section-banner-title {
+      font-size: 25px;
+      font-weight: bold;
+      color: #5c2c26;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    /* Main Responsive Image Gallery Grid */
+    .gallery-container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /* Beautiful Card Style Wrapper for your images */
+    .bakery-img-wrapper {
+      width: calc(33.333% - 14px); /* Perfect 3-column layout sizing */
+      min-width: 280px; /* Keeps layout responsive on mobile screens */
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(92, 44, 38, 0.05);
+      border: 1px solid #fff0eb;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .bakery-img-wrapper:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 0, 0, 0.1);
+    }
+
+    .bakery-img-wrapper img {
+      width: 100%;
+      height: 280px; /* Keeps all of your photos uniform and level */
+      object-fit: cover; /* Crops photos beautifully without stretching */
+      border-radius: 10px;
+    }
+
+    /* Clean Styled Divider Line */
+    .styled-hr {
+      border: none;
+      height: 4px;
+      background: linear-gradient(to right, transparent, #ffccd0, #ff0000, #ffccd0, transparent);
+      margin: 60px auto;
+      max-width: 80%;
+    }
+
+    /* Pure Veg Green Badge indicator */
+    .veg-indicator {
+      display: inline-block;
+      background-color: #e8f5e9;
+      color: #1b5e20;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      border: 1px solid #a5d6a7;
+    }
+
+    /* Footer Layout */
+    footer {
+      background-color: #361d1b;
+      color: #f7eceb;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <h2>🧁 Shutrust Bakery Menu Gallery</h2>
+    <a href="index.html" class="back-btn">⬅️ Back To Home Page</a>
+  </header>
+
+  <!-- Subpage Hero Area -->
+  <section class="subpage-hero">
+    <h1>Our Sweet Product Menu 🎂</h1>
+    <span class="veg-indicator">🟢 100% Pure Veg & Eggless Varieties</span>
+    <p style="font-size: 18px; font-weight: 500;">Take a look through our fresh, custom creations handcrafted right here in Tata Mines Kaliapani, Jajpur!</p>
+  </section>
+
+  <!-- CATEGORY 1: CAKES (Contains all 48 Cake images exactly) -->
+  <p class="section-banner-title">OUR VAST CAKE VARIETY AND CUSTOMIZABLE CAKES 👇</p>
+  
+  <div class="gallery-container">
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0061.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0060.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0059.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0045.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0046.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0044.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0043.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0042.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0041.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0040.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0039.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0038.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0037.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0036.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0035.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0034.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0032.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0033.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0030.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0029.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0028.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0027.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0026.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0025.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0024.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0022.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0020.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0019.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0017.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0016.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0012.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0011.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0003.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0008.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0004.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0005.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0049.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0048.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0047.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0057.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0053.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0055.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0058.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0052.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0056.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0031.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0013.jpg" alt="Cake"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0015.jpg" alt="Cake"></div>
+  </div>
+
+  <!-- Decorative Separator Line -->
+  <div class="styled-hr"></div>
+
+  <!-- CATEGORY 2: PASTRIES & FOOD ITEMS (Contains all 15 Pastry/Brownie images exactly) -->
+  <p class="section-banner-title">OUR VAST PASTRIES AND OTHER FOOD ITEM VARIETY AND CUSTOMIZABLE BROWNIES 👇</p>
+  
+  <div class="gallery-container" style="margin-bottom: 40px;">
+    <div class="bakery-img-wrapper"><img src="Screenshot 2026-07-13 153055.png" alt="Pastry"></div>
+    <div class="bakery-img-wrapper"><img src="Screenshot 2026-07-13 153120.png" alt="Pastry"></div>
+    <div class="bakery-img-wrapper"><img src="Screenshot 2026-07-13 153253.png" alt="Pastry"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0074.jpg" alt="Pastry"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0072.jpg" alt="Pastry"></div>
+    <div class="bakery-img-wrapper"><img src="IMG-20260622-WA0076.jpg" alt="Pastry"></div>
+<hr>
+  <!-- Decorative Separator Line -->
+  <div class="styled-hr"></div>
+
+  <!-- CATEGORY 3: BEHIND THE SCENES VIDEO -->
+  <section style="max-width: 900px; margin: 0 auto 60px auto; padding: 0 20px;">
+    <h2 style="font-size: 25px; text-align: center; color: #5c2c26; font-weight: 700; margin-bottom: 15px;">
+      🎥 SEE HOW WE FRESHLY MAKE OUR DELICIOUS PRODUCTS AT HOME 👇
+    </h2>
+    <p style="text-align: center; color: #665250; margin-bottom: 30px;">
+      Take a sneak peek into our pure, 100% vegetarian home kitchen where the magic happens!
+    </p>
+    
+    <!-- Responsive Video Box Container -->
+    <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; background-color: #000000; border-radius: 15px; box-shadow: 0 10px 25px rgba(92, 44, 38, 0.1); overflow: hidden; border: 4px solid #ffffff;">
+      <!-- Replace the src link below with your actual video link later -->
+      <video controls style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+        <source src="abc.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
